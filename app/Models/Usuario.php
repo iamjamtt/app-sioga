@@ -28,13 +28,14 @@ class Usuario extends Authenticatable
     ];
 
     protected $casts = [
-        'estado_usuario' => 'boolean'
+        'estado_usuario' => 'boolean',
+        'creado_en' => 'datetime',
+        'actualizado_en' => 'datetime',
+        'eliminado_en' => 'datetime'
     ];
 
     protected $hidden = [
-        'contrasenia_usuario',
-        'eliminado_en',
-        'eliminado_por'
+        'contrasenia_usuario'
     ];
 
     public function persona(): BelongsTo
